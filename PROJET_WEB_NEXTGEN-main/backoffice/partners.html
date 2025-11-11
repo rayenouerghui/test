@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Partenaires - NextGen Admin</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="css/backoffice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>NextGen Admin</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">📊 Tableau de Bord</a></li>
+                <li><a href="games.html">🎮 Gestion des Jeux</a></li>
+                <li><a href="users.html">👥 Gestion des Utilisateurs</a></li>
+                <li><a href="orders.html">🛒 Gestion des Commandes</a></li>
+                <li><a href="donations.html">💝 Gestion des Dons</a></li>
+                <li><a href="partners.html" class="active">🤝 Gestion des Partenaires</a></li>
+                <li><a href="returns.html">↩️ Retours et Réclamations</a></li>
+                <li><a href="settings.html">⚙️ Paramètres</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../frontoffice/index.html" class="view-site">Voir le Site</a>
+            <a href="#" class="logout">Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-content">
+                <h1>Gestion des Partenaires</h1>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="addPartnerBtn">+ Ajouter un Partenaire</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="admin-content">
+            <!-- Partners Grid -->
+            <div class="partners-grid-admin" id="partnersGrid">
+                <!-- Partners will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Add/Edit Partner Modal -->
+    <div class="modal" id="partnerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="partnerModalTitle">Ajouter un Partenaire</h2>
+                <button class="modal-close" id="closePartnerModal">×</button>
+            </div>
+            <form id="partnerForm">
+                <div class="form-group">
+                    <label>Nom de l'ONG *</label>
+                    <input type="text" id="partnerName" required>
+                </div>
+                <div class="form-group">
+                    <label>Description *</label>
+                    <textarea id="partnerDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Email de Contact *</label>
+                    <input type="email" id="partnerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" id="partnerPhone">
+                </div>
+                <div class="form-group">
+                    <label>Adresse</label>
+                    <input type="text" id="partnerAddress">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Numéro d'Enregistrement Légal *</label>
+                        <input type="text" id="partnerLegalNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Statut</label>
+                        <select id="partnerStatus">
+                            <option value="active">Actif</option>
+                            <option value="pending">En Attente de Validation</option>
+                            <option value="inactive">Inactif</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Logo URL</label>
+                    <input type="url" id="partnerLogo">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelPartnerBtn">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+

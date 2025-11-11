@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres - NextGen Admin</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="css/backoffice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>NextGen Admin</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">📊 Tableau de Bord</a></li>
+                <li><a href="games.html">🎮 Gestion des Jeux</a></li>
+                <li><a href="users.html">👥 Gestion des Utilisateurs</a></li>
+                <li><a href="orders.html">🛒 Gestion des Commandes</a></li>
+                <li><a href="donations.html">💝 Gestion des Dons</a></li>
+                <li><a href="partners.html">🤝 Gestion des Partenaires</a></li>
+                <li><a href="returns.html">↩️ Retours et Réclamations</a></li>
+                <li><a href="settings.html" class="active">⚙️ Paramètres</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../frontoffice/index.html" class="view-site">Voir le Site</a>
+            <a href="#" class="logout">Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-content">
+                <h1>Paramètres</h1>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="admin-content">
+            <div class="settings-sections">
+                <!-- General Settings -->
+                <div class="settings-section">
+                    <h2>Paramètres Généraux</h2>
+                    <form id="generalSettingsForm">
+                        <div class="form-group">
+                            <label>Nom du Site</label>
+                            <input type="text" id="siteName" value="NextGen">
+                        </div>
+                        <div class="form-group">
+                            <label>Email de Contact</label>
+                            <input type="email" id="contactEmail" value="contact@nextgen.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Pourcentage de Don (%)</label>
+                            <input type="number" id="donationPercentage" value="20" min="0" max="100">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+
+                <!-- Security Settings -->
+                <div class="settings-section">
+                    <h2>Sécurité</h2>
+                    <form id="securitySettingsForm">
+                        <div class="form-group">
+                            <label>Changer le Mot de Passe Admin</label>
+                            <input type="password" id="currentAdminPassword" placeholder="Mot de passe actuel">
+                            <input type="password" id="newAdminPassword" placeholder="Nouveau mot de passe">
+                            <input type="password" id="confirmAdminPassword" placeholder="Confirmer le mot de passe">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Mettre à Jour</button>
+                    </form>
+                </div>
+
+                <!-- AI Settings -->
+                <div class="settings-section">
+                    <h2>Paramètres IA</h2>
+                    <form id="aiSettingsForm">
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="chatbotEnabled" checked>
+                                Activer le Chatbot
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="recommendationsEnabled" checked>
+                                Activer les Recommandations de Jeux
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+

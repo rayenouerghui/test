@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Jeux - NextGen Admin</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="css/backoffice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>NextGen Admin</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">📊 Tableau de Bord</a></li>
+                <li><a href="games.html" class="active">🎮 Gestion des Jeux</a></li>
+                <li><a href="users.html">👥 Gestion des Utilisateurs</a></li>
+                <li><a href="orders.html">🛒 Gestion des Commandes</a></li>
+                <li><a href="donations.html">💝 Gestion des Dons</a></li>
+                <li><a href="partners.html">🤝 Gestion des Partenaires</a></li>
+                <li><a href="returns.html">↩️ Retours et Réclamations</a></li>
+                <li><a href="settings.html">⚙️ Paramètres</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../frontoffice/index.html" class="view-site">Voir le Site</a>
+            <a href="#" class="logout">Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-content">
+                <h1>Gestion des Jeux</h1>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="addGameBtn">+ Ajouter un Jeu</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="admin-content">
+            <!-- Filters -->
+            <div class="admin-filters">
+                <input type="text" id="gameSearch" placeholder="Rechercher un jeu...">
+                <select id="categoryFilter">
+                    <option value="">Toutes les catégories</option>
+                    <option value="aventure">Aventure</option>
+                    <option value="action">Action</option>
+                    <option value="strategie">Stratégie</option>
+                    <option value="rpg">RPG</option>
+                    <option value="sport">Sport</option>
+                </select>
+                <select id="statusFilter">
+                    <option value="">Tous les statuts</option>
+                    <option value="active">Actif</option>
+                    <option value="inactive">Inactif</option>
+                </select>
+            </div>
+
+            <!-- Games Table -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Nom</th>
+                            <th>Catégorie</th>
+                            <th>Prix</th>
+                            <th>Stock</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gamesTable">
+                        <!-- Games will be loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add/Edit Game Modal -->
+    <div class="modal" id="gameModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Ajouter un Jeu</h2>
+                <button class="modal-close" id="closeModal">×</button>
+            </div>
+            <form id="gameForm">
+                <div class="form-group">
+                    <label>Nom du Jeu *</label>
+                    <input type="text" id="gameName" required>
+                </div>
+                <div class="form-group">
+                    <label>Description *</label>
+                    <textarea id="gameDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Catégorie *</label>
+                        <select id="gameCategory" required>
+                            <option value="aventure">Aventure</option>
+                            <option value="action">Action</option>
+                            <option value="strategie">Stratégie</option>
+                            <option value="rpg">RPG</option>
+                            <option value="sport">Sport</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Prix (€) *</label>
+                        <input type="number" id="gamePrice" step="0.01" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Stock *</label>
+                        <input type="number" id="gameStock" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Statut</label>
+                        <select id="gameStatus">
+                            <option value="active">Actif</option>
+                            <option value="inactive">Inactif</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="url" id="gameImage">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
