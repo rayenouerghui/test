@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen - Jouer pour Espérer</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="css/frontoffice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .matchmaking-btn {
+            background: white;
+            color: #2563eb;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .matchmaking-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">NextGen</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="catalog.html">Jeux</a></li>
+                        <li><a href="matchmaking.html">🎮 Matchmaking</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="donations.html">Nos Dons</a></li>
+                        <li><a href="returns.html">Retours et Réclamations</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon" title="Panier">
+                        🛒
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="account.html" class="account-icon">Mon Compte</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jouer pour Espérer</h1>
+                <p>Chaque achat de jeu vidéo contribue à soutenir la Maison des Orphelins</p>
+                <a href="catalog.html" class="btn btn-primary">Découvrir les Jeux</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="featured-games">
+        <div class="container">
+            <h2 class="section-title">Jeux Populaires</h2>
+            <div class="games-grid" id="featuredGames">
+                <!-- Games will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="section-title">Notre Impact</h2>
+            <div class="impact-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalDonated">0 €</div>
+                    <div class="stat-label">Collectés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="childrenHelped">0</div>
+                    <div class="stat-label">Enfants Aidés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="gamesSold">0</div>
+                    <div class="stat-label">Jeux Vendus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matchmaking Section -->
+    <section class="matchmaking-section" style="background: linear-gradient(135deg, #2563eb 0%, #ea580c 100%); padding: 60px 0; color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title" style="color: white; margin-bottom: 20px;">🎮 Trouvez des Partenaires de Jeu</h2>
+                <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">
+                    Vous avez acheté un jeu ? Trouvez rapidement des partenaires pour jouer ensemble ! 
+                    Notre système de matchmaking vous met en relation avec d'autres joueurs qui possèdent le même jeu.
+                </p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+                    <div style="flex: 1; min-width: 200px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 32px; margin-bottom: 10px;">⚡</div>
+                        <h3 style="color: white; margin-bottom: 10px;">Rapide</h3>
+                        <p style="opacity: 0.9; font-size: 14px;">Trouvez un partenaire en quelques clics</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 32px; margin-bottom: 10px;">🎯</div>
+                        <h3 style="color: white; margin-bottom: 10px;">Intelligent</h3>
+                        <p style="opacity: 0.9; font-size: 14px;">Matchmaking automatique basé sur vos jeux</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 32px; margin-bottom: 10px;">👥</div>
+                        <h3 style="color: white; margin-bottom: 10px;">Social</h3>
+                        <p style="opacity: 0.9; font-size: 14px;">Rencontrez de nouveaux joueurs</p>
+                    </div>
+                </div>
+                <a href="matchmaking.html" class="matchmaking-btn">
+                    🎮 Accéder au Matchmaking
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-toggle" id="chatbotToggle">
+            <span>💬</span>
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>Assistant NextGen</h3>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot">
+                    <p>Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Tapez votre message...">
+                <button id="chatbotSend">Envoyer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NextGen</h3>
+                    <p>Plateforme de vente de jeux vidéo à vocation solidaire</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="catalog.html">Catalogue</a></li>
+                        <li><a href="matchmaking.html">Matchmaking</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="donations.html">Nos Dons</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="returns.html">Retours</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NextGen. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Commandes - NextGen Admin</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="css/backoffice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>NextGen Admin</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">📊 Tableau de Bord</a></li>
+                <li><a href="games.html">🎮 Gestion des Jeux</a></li>
+                <li><a href="users.html">👥 Gestion des Utilisateurs</a></li>
+                <li><a href="orders.html" class="active">🛒 Gestion des Commandes</a></li>
+                <li><a href="donations.html">💝 Gestion des Dons</a></li>
+                <li><a href="partners.html">🤝 Gestion des Partenaires</a></li>
+                <li><a href="returns.html">↩️ Retours et Réclamations</a></li>
+                <li><a href="settings.html">⚙️ Paramètres</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../frontoffice/index.html" class="view-site">Voir le Site</a>
+            <a href="#" class="logout">Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-content">
+                <h1>Gestion des Commandes</h1>
+                <div class="header-actions">
+                    <select id="orderStatusFilter">
+                        <option value="">Tous les statuts</option>
+                        <option value="pending">En Attente</option>
+                        <option value="processing">En Traitement</option>
+                        <option value="completed">Terminée</option>
+                        <option value="cancelled">Annulée</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="admin-content">
+            <!-- Orders Table -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID Commande</th>
+                            <th>Client</th>
+                            <th>Jeux</th>
+                            <th>Montant</th>
+                            <th>Don (20%)</th>
+                            <th>Statut</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTable">
+                        <!-- Orders will be loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Order Details Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>Détails de la Commande</h2>
+                <button class="modal-close" id="closeOrderModal">×</button>
+            </div>
+            <div id="orderDetails">
+                <!-- Order details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

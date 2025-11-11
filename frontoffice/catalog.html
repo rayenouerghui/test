@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - NextGen</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="css/frontoffice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">NextGen</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="catalog.html" class="active">Jeux</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="donations.html">Nos Dons</a></li>
+                        <li><a href="returns.html">Retours et Réclamations</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon" title="Panier">
+                        🛒
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="account.html" class="account-icon">Mon Compte</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <h1 class="page-title">Catalogue de Jeux</h1>
+            
+            <!-- Search and Sort -->
+            <div class="catalog-filters">
+                <div class="filter-group" style="flex: 2;">
+                    <input type="text" id="searchInput" placeholder="Rechercher un jeu...">
+                </div>
+                <div class="filter-group">
+                    <label>Trier par:</label>
+                    <select id="sortSelect">
+                        <option value="name">Nom (A-Z)</option>
+                        <option value="price-asc">Prix (Croissant)</option>
+                        <option value="price-desc">Prix (Décroissant)</option>
+                        <option value="category">Catégorie</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Games Grid -->
+            <div class="games-grid" id="gamesGrid">
+                <!-- Game 1 -->
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200?text=Jungle+Quest" alt="Jungle Quest">
+                    <div class="game-card-content">
+                        <h3>Jungle Quest</h3>
+                        <p class="game-category">Aventure</p>
+                        <p class="game-price">29,99 €</p>
+                        <form action="cart.html" method="GET" style="display: inline;">
+                            <input type="hidden" name="game_id" value="1">
+                            <input type="hidden" name="game_name" value="Jungle Quest">
+                            <input type="hidden" name="game_price" value="29.99">
+                            <input type="hidden" name="game_image" value="https://via.placeholder.com/300x200?text=Jungle+Quest">
+                            <button type="submit" class="btn btn-primary">Ajouter au Panier</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Game 2 -->
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200?text=Space+Warriors" alt="Space Warriors">
+                    <div class="game-card-content">
+                        <h3>Space Warriors</h3>
+                        <p class="game-category">Action</p>
+                        <p class="game-price">39,99 €</p>
+                        <form action="cart.html" method="GET" style="display: inline;">
+                            <input type="hidden" name="game_id" value="2">
+                            <input type="hidden" name="game_name" value="Space Warriors">
+                            <input type="hidden" name="game_price" value="39.99">
+                            <input type="hidden" name="game_image" value="https://via.placeholder.com/300x200?text=Space+Warriors">
+                            <button type="submit" class="btn btn-primary">Ajouter au Panier</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Game 3 -->
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200?text=Kingdom+Builder" alt="Kingdom Builder">
+                    <div class="game-card-content">
+                        <h3>Kingdom Builder</h3>
+                        <p class="game-category">Stratégie</p>
+                        <p class="game-price">34,99 €</p>
+                        <form action="cart.html" method="GET" style="display: inline;">
+                            <input type="hidden" name="game_id" value="3">
+                            <input type="hidden" name="game_name" value="Kingdom Builder">
+                            <input type="hidden" name="game_price" value="34.99">
+                            <input type="hidden" name="game_image" value="https://via.placeholder.com/300x200?text=Kingdom+Builder">
+                            <button type="submit" class="btn btn-primary">Ajouter au Panier</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Game 4 -->
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200?text=Epic+RPG" alt="Epic RPG">
+                    <div class="game-card-content">
+                        <h3>Epic RPG</h3>
+                        <p class="game-category">RPG</p>
+                        <p class="game-price">49,99 €</p>
+                        <form action="cart.html" method="GET" style="display: inline;">
+                            <input type="hidden" name="game_id" value="4">
+                            <input type="hidden" name="game_name" value="Epic RPG">
+                            <input type="hidden" name="game_price" value="49.99">
+                            <input type="hidden" name="game_image" value="https://via.placeholder.com/300x200?text=Epic+RPG">
+                            <button type="submit" class="btn btn-primary">Ajouter au Panier</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Game 5 -->
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200?text=Football+Pro" alt="Football Pro">
+                    <div class="game-card-content">
+                        <h3>Football Pro</h3>
+                        <p class="game-category">Sport</p>
+                        <p class="game-price">44,99 €</p>
+                        <form action="cart.html" method="GET" style="display: inline;">
+                            <input type="hidden" name="game_id" value="5">
+                            <input type="hidden" name="game_name" value="Football Pro">
+                            <input type="hidden" name="game_price" value="44.99">
+                            <input type="hidden" name="game_image" value="https://via.placeholder.com/300x200?text=Football+Pro">
+                            <button type="submit" class="btn btn-primary">Ajouter au Panier</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Game 6 -->
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200?text=Mystic+Adventure" alt="Mystic Adventure">
+                    <div class="game-card-content">
+                        <h3>Mystic Adventure</h3>
+                        <p class="game-category">Aventure</p>
+                        <p class="game-price">35,99 €</p>
+                        <form action="cart.html" method="GET" style="display: inline;">
+                            <input type="hidden" name="game_id" value="6">
+                            <input type="hidden" name="game_name" value="Mystic Adventure">
+                            <input type="hidden" name="game_price" value="35.99">
+                            <input type="hidden" name="game_image" value="https://via.placeholder.com/300x200?text=Mystic+Adventure">
+                            <button type="submit" class="btn btn-primary">Ajouter au Panier</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be generated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Recommendations -->
+    <section class="recommendations-section">
+        <div class="container">
+            <h2 class="section-title">Recommandations pour Vous</h2>
+            <div class="games-grid" id="recommendedGames">
+                <!-- AI recommendations will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NextGen</h3>
+                    <p>Plateforme de vente de jeux vidéo à vocation solidaire</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="catalog.html">Catalogue</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="donations.html">Nos Dons</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="returns.html">Retours</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NextGen. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
